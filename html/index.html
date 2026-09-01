@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="../css/index.css" />
+  </head>
+
+  <body>
+    <section id="left-section">
+      <div id="left-top-div">
+        <div id="left-logo-div" class="">
+          <img
+            width="50"
+            src="../assets/wallet-svgrepo-com.svg"
+            alt="da"
+            style="filter: invert()"
+          />
+          <h1>Expense Tracker</h1>
+        </div>
+        <div id="menu-div">
+          <a href="#right-section" class="menu-link" tabindex="0">
+            <img
+              width="30"
+              style="filter: invert()"
+              src="../assets/home-svgrepo-com.svg"
+              alt="dashboard"
+            />
+            <div class="menu-text">Dashboard</div>
+          </a>
+          <a href="#right-section" class="menu-link" tabindex="0">
+            <img
+              width="30"
+              style="filter: invert()"
+              src="../assets/equalizer-filter-filtering-svgrepo-com.svg"
+              alt="dashboard"
+            />
+            <div class="menu-text">Transactions</div>
+          </a>
+          <a href="#right-section" class="menu-link" tabindex="0">
+            <img
+              width="30"
+              style="filter: invert()"
+              src="../assets/plus-large-svgrepo-com.svg"
+              alt="dashboard"
+            />
+            <div class="menu-text">Add Transaction</div>
+          </a>
+          <a href="#right-section" class="menu-link" tabindex="0">
+            <img
+              width="30"
+              style="filter: invert()"
+              src="../assets/note-svgrepo-com.svg"
+              alt="dashboard"
+            />
+            <div class="menu-text">Categories</div>
+          </a>
+          <a href="#right-section" class="menu-link" tabindex="0">
+            <img
+              width="30"
+              style="filter: invert()"
+              src="../assets/graph-svgrepo-com.svg"
+              alt="dashboard"
+            />
+            <div class="menu-text">Reports</div>
+          </a>
+          <a href="#right-section" class="menu-link" tabindex="0">
+            <img
+              width="30"
+              style="filter: invert()"
+              src="../assets/gear-svgrepo-com.svg"
+              alt="dashboard"
+            />
+            <div class="menu-text">Settings</div>
+          </a>
+        </div>
+      </div>
+      <div id="left-bottom-div">
+        <h2>Expense Summary</h2>
+        <div class="summary-div">
+          <div class="summary-text">Total income</div>
+          <div id="left-income-val" class="summery-amount income-amount">
+            ₹ 85,000
+          </div>
+        </div>
+        <div class="summary-div">
+          <div class="summary-text">Total Expense</div>
+          <div id="left-expense-val" class="summery-amount expense-amount">
+            ₹ 45,000
+          </div>
+        </div>
+        <div class="summary-div">
+          <div class="summary-text">Current Amount</div>
+          <div id="left-current-val" class="summery-amount current-amount">
+            ₹ 95,000
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="right-section">
+      <nav>
+        <button
+          id="menu-toggle"
+          type="button"
+          aria-label="Open navigation"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div id="nav-section">
+          <div id="logo-div" class="">
+            <img
+              width="40"
+              src="../assets/app-apps-applications-tiles-svgrepo-com.svg"
+              alt="expense tracker"
+            />
+            <h1>Dashboard</h1>
+          </div>
+          <!-- <div id="date-nav-div" class="">
+            <input type="date" name="date" id="date-input" />
+          </div> -->
+        </div>
+      </nav>
+      <div id="menu-backdrop" aria-hidden="true"></div>
+
+      <section id="box-section">
+        <div id="income-div" class="grid-box">
+          <div id="income-svg-div" class="grid-svg-div">
+            <img
+              width="50"
+              src="../assets/arrow-right-up-297-svgrepo-com.svg"
+              alt="income"
+            />
+          </div>
+          <div id="income-detail-div" class="detail-div">
+            <div class="">Total income</div>
+            <div class="income-amount">₹ 85,000.00</div>
+            <div class="">
+              <!-- <span id="income-pr"> +12.5% </span> -->
+              <!-- from last month -->
+            </div>
+          </div>
+        </div>
+        <div id="expense-div" class="grid-box">
+          <div id="expense-svg-div" class="grid-svg-div">
+            <img width="50" src="../assets/white-down.svg" alt="income" />
+          </div>
+          <div id="expense-detail-div" class="detail-div">
+            <div class="">Total Expense</div>
+            <div class="expense-amount">₹ 56,000.00</div>
+            <div class="">
+              <!-- <span id="exxpense-pr"> +12.5% </span> -->
+              <!-- from last month -->
+            </div>
+          </div>
+        </div>
+        <div id="current-div" class="grid-box">
+          <div id="current-svg-div" class="grid-svg-div">
+            <img
+              width="50"
+              src="../assets/wallet-svgrepo-com.svg"
+              alt="income"
+            />
+          </div>
+          <div id="current-detail-div" class="detail-div">
+            <div class="">Current Balance</div>
+            <div class="current-amount">₹ 49,000.00</div>
+            <div class="">
+              <!-- <span id="current-pr"> +12.5% </span> -->
+              <!-- from last month -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <main>
+        <section id="transaction-section">
+          <h2>Recent Transactions</h2>
+          <div id="input-grid" class="">
+            <input
+              type="search"
+              name="search-transaction"
+              id="search-transaction"
+              placeholder="search by title"
+            />
+            <select name="type" id="filter-type">
+              <option value="all-types">All Types</option>
+              <option value="income">Income</option>
+              <option value="expense">Expense</option>
+            </select>
+            <select name="type" id="filter-category">
+              <option value="all-category">All Category</option>
+              <option value="education">Education</option>
+              <option value="salary">Salary</option>
+              <option value="housing">Housing</option>
+              <option value="food">Food</option>
+              <option value="utilities">Utilities</option>
+              <option value="transportaion">Transportaion</option>
+            </select>
+            <div id="clear-filter" class="">
+              <img
+                width="25"
+                src="../assets/refresh-cw-alt-3-svgrepo-com.svg"
+                alt="clear"
+              />
+              <span>Clear filters</span>
+            </div>
+          </div>
+          <div id="table-div">
+            <table id="table">
+              <thead>
+                <tr>
+                  <th>Id</th>
+                  <th>Title</th>
+                  <th>Category</th>
+                  <th>Type</th>
+                  <th>Amount</th>
+                  <th>Date</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="tbody"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="form-section">
+          <div id="form-div" class="">
+            <h3>Add Transaction</h3>
+            <div id="form-grid" class="">
+              <div id="title-div" class="form-grid-div">
+                <div class="input-title-div">Title</div>
+                <input
+                  id="title-input"
+                  class="form-input"
+                  type="text"
+                  placeholder="Enter title"
+                />
+                <div id="title-error-div" class=""></div>
+              </div>
+              <div id="amount-div" class="form-grid-div">
+                <div class="input-amount-div">Amount</div>
+                <input
+                  id="amount-input"
+                  class="form-input"
+                  type="number"
+                  placeholder="Enter amount"
+                />
+                <div id="amount-error-div"></div>
+              </div>
+              <div id="type-select-div" class="form-grid-div">
+                <div class="input-title-div">Type</div>
+                <select name="type" id="select-type" class="form-input">
+                  <option value="all-types">All Types</option>
+                  <option value="income">Income</option>
+                  <option value="expense">Expense</option>
+                </select>
+                <div id="type-error-div"></div>
+              </div>
+              <div id="category-select-div" class="form-grid-div">
+                <div class="input-title-div">Category</div>
+                <select name="type" id="select-category" class="form-input">
+                  <option value="all-category">All Category</option>
+                  <option value="education">Education</option>
+                  <option value="salary">Salary</option>
+                  <option value="housing">Housing</option>
+                  <option value="food">Food</option>
+                  <option value="utilities">Utilities</option>
+                  <option value="transportaion">Transportaion</option>
+                  <option value="other">Other</option>
+                </select>
+                <div id="select-error-div"></div>
+              </div>
+              <div id="date-form-div" class="form-grid-div">
+                <div class="input-title-div">Date</div>
+                <input type="date" id="date-input-form" class="form-input" />
+                <div id="date-error-div"></div>
+              </div>
+            </div>
+            <div id="add-btn-div" class="">
+              <div id="form-error-div"></div>
+              <button id="add-button">Add Transaction</button>
+            </div>
+          </div>
+
+          <div id="chart-div" class="">
+            <h2 id="chart-head">Expense by Category</h2>
+            <div id="chart">
+              <div id="hole-div" class="">
+                <div class="">₹ 45,000</div>
+                <div class="">Total expense</div>
+              </div>
+              <div class="pie-chart"></div>
+            </div>
+            <div id="chart-details">
+              <div class="dot-detail-div">
+                <div id="housing-dot" class="dot-div"></div>
+                <div class="dot-detail">Housing</div>
+                <div id="housing-percent" class="dot-percent">10%</div>
+              </div>
+              <div class="dot-detail-div">
+                <div id="food-dot" class="dot-div"></div>
+                <div class="dot-detail">food</div>
+                <div id="food-percent" class="dot-percent">10%</div>
+              </div>
+              <div class="dot-detail-div">
+                <div id="util-dot" class="dot-div"></div>
+                <div class="dot-detail">Utilities</div>
+                <div id="util-percent" class="dot-percent">10%</div>
+              </div>
+              <div class="dot-detail-div">
+                <div id="trans-dot" class="dot-div"></div>
+                <div class="dot-detail">Transportaion</div>
+                <div id="trans-percent" class="dot-percent">10%</div>
+              </div>
+              <div class="dot-detail-div">
+                <div id="other-dot" class="dot-div"></div>
+                <div class="dot-detail">Other</div>
+                <div id="other-percent" class="dot-percent">10%</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div id="warning-div" class="footer-div">
+          <img
+            width="50"
+            src="../assets/caution-mark-svgrepo-com.svg"
+            alt="alert"
+          />
+          <div class="details">
+            <h2 class="">Clear all transactions !</h2>
+            <div class="">
+              This will permanently delete all your transactions.This action
+              cannot be undone.
+            </div>
+          </div>
+        </div>
+        <div id="clear-all-button-div" class="footer-div">
+          <img
+            width="24 "
+            src="../assets/delete-svgrepo-com.svg"
+            alt="delete"
+          />
+          <span>Clear All</span>
+        </div>
+      </footer>
+    </section>
+  </body>
+
+  <script src="../javascript/index.js"></script>
+</html>
+
+<!-- ₹ -->
