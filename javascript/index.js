@@ -311,7 +311,7 @@ document.getElementById("add-button").addEventListener("click", (e) => {
     let currID = new URLSearchParams(window.location.search).get("id");
 
     let currTrans = transactionLS.find((item) => {
-      return item.id == currID;
+      return item.tId == currID;
     });
 
     let editConirm = confirm("do you want to edit this transaction ?");
@@ -322,7 +322,7 @@ document.getElementById("add-button").addEventListener("click", (e) => {
     }
 
     let deletedObjLs = transactionLS.filter((item) => {
-      return item.id != currID;
+      return item.tId != currID;
     });
     console.log(currID);
     console.log(deletedObjLs);
@@ -341,6 +341,12 @@ document.getElementById("add-button").addEventListener("click", (e) => {
 
     localStorage.setItem("transactions", JSON.stringify(setObj));
 
+    document.getElementById("title-input").value = "";
+    document.getElementById("amount-input").value = "";
+    document.getElementById("select-type").value = "";
+    document.getElementById("select-category").value = "";
+    document.getElementById("date-input-form").value = "";
+
     alert("transaction edited successfully .");
     window.location.href = "/html/index.html";
     return;
@@ -351,7 +357,7 @@ document.getElementById("add-button").addEventListener("click", (e) => {
   if (
     transactionLS
       .map((item) => {
-        return item.id;
+        return item.tId;
       })
       .includes(randId)
   ) {
